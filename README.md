@@ -12,6 +12,35 @@
   2. 간편인증(카카오) 전달 - response 인증 대기페이지 
   3. 2021 근로, 금융소득 json전달
 
+## 프로젝트 구조 
+
+  📁 modules
+  
+   - 스크래핑 모듈 저장 디렉토리
+   
+  📁 node_modules
+  
+   - npm install 을 통해 저장한 JS가 저장된 디렉토리
+    
+  📁 public
+  
+   - html,css, js와 같은 static 파일 저장 디렉토리
+   
+  📁 publicJS
+  
+   - 스크래핑에 필요한 함수나 클래스 저장파일
+   
+  📁 routes
+  
+   - URL routing할 때 사용한 JS저장 디렉토리
+
+
+  💾 index.js 
+  
+   - app.js 와 동일 파일 
+   - Server open, / urlhosting, 
+  
+
 ## 사용모듈
 
 
