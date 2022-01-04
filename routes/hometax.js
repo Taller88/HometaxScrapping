@@ -16,8 +16,8 @@ router.post("/hometax",async function(req, res){
     var userPhone=  base64Encoding(req.body.phoneNum);
     var userSsn1=   base64Encoding(req.body.ssn1);
     var userSsn2=   base64Encoding(req.body.ssn2);
-    name = userName;
-    var result = await hometax.prototype.login(userName, userPhone, userSsn1,userSsn2);
+    name = req.body.userName;
+    var result = await hometax.prototype.login(userName, userPhone, userSsn1,userSsn2, name);
 
     console.log("main : "+ result);
     if(result == "OK"){

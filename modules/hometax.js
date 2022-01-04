@@ -7,7 +7,7 @@ var hometax = function(){
     var cookieValue = "";
 }
 
-hometax.prototype.login = async function(userName, userPhone,userSsn1,userSsn2){
+hometax.prototype.login = async function(userName, userPhone,userSsn1,userSsn2, name){
     console.log("param check userName: "+userName+ " userPhone: "+userPhone);
 
     var path = "/gpin/v1/request_tx"
@@ -54,7 +54,7 @@ hometax.prototype.login = async function(userName, userPhone,userSsn1,userSsn2){
                 'Accept-Language' : 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7'
             }
         });
-        // console.log(result);
+
         var cookieArr = result.headers["set-cookie"];
         var cookie = "";
         for(var i=0; i<cookieArr.length; i++){
@@ -67,6 +67,7 @@ hometax.prototype.login = async function(userName, userPhone,userSsn1,userSsn2){
 
         var postData = '{"idn":"","userInfo":{"isMember":false,"name":"'+userName+'","phoneNumber":"'+userPhone+'","ssn1":"'+userSsn1+'","ssn2":"'+userSsn2+'","birthday":"","privacy":"1","terms":"1","policy3":"1","policy4":"1"},"provider":"kakao"}'
 
+        // 모바일로 요청
         var result = await axios({
             method: 'post',
             url: "https://www.hometax.go.kr/gpin/v1/certification/notice?reqTxId="+reqTxId,
