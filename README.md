@@ -3,6 +3,14 @@
 
 ![image](https://user-images.githubusercontent.com/48818574/148074686-cf22180e-9cd4-4242-98e7-ceb0cf17cbc9.png)
 
+***
+
+## 프로젝트 소개 
+    nodeJS를 활용하여 스크래핑을 진행한 페이지입니다. 
+    
+  1. 웹에서 입력 
+  2. 간편인증(카카오) 전달 - response 인증 대기페이지 
+  3. 2021 근로, 금융소득 json전달
 
 ## 사용모듈
 
