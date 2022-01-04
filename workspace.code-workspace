@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "HometaxScrapping",
+			"path": "."
+		},
+		{
+			"name": "publicJs",
+			"path": "..\\musicScrapping\\publicJs"
+		}
+	],
+	"settings": {}
+}
