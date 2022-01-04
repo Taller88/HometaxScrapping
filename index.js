@@ -11,10 +11,12 @@ app.use(bodyParser.urlencoded())
 app.use('/', webInput);
 
 
+// 3000 port open
 app.listen(3000, function(){
     console.log("[Server] 3000 port open");
 });
 
+// '/' URL hostring 
 app.get("/", function(req, res){
     console.log("nodeJS URL Routing Test");
     console.log("dirName: "+__dirname);
