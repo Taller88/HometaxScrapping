@@ -1,5 +1,8 @@
 const axios = require('axios');
 
+// http통신 관련 
+// get, post 통신외 통신 결과에서 나오는 getCookie, getResult 
+ 
 var httpRequest = function(){
     var result = ""; 
 }
