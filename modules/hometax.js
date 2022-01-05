@@ -9,7 +9,7 @@ var hometax = function(){
 
 hometax.prototype.login = async function(userName, userPhone,userSsn1,userSsn2, name){
     console.log("param check userName: "+userName+ " userPhone: "+userPhone);
-
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
     var path = "/gpin/v1/request_tx"
 
     try{
