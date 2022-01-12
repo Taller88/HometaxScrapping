@@ -18,10 +18,12 @@ router.post("/hometax",async function(req, res){
     var userSsn2=   base64Encoding(req.body.ssn2);
     name = req.body.userName;
     var result = await hometax.prototype.login(userName, userPhone, userSsn1,userSsn2, name);
+    var path = __dirname.substring(0,__dirname.lastIndexOf("\\"));
+    console.log("path: "+path);
 
     console.log("main : "+ result);
     if(result == "OK"){
-        res.sendFile(mainDir+"/public/html/responsing.html");
+        res.sendFile(path+"/public/html/responsing.html");
     }
 
 });
