@@ -4,7 +4,7 @@ const hometax = require('../modules/hometax')
 const sliceFunc = require('../publicJs/commonJS')
 const router = express.Router();
 
-const mainDir = 'C:\\Users\\user\\Desktop\\HometaxScrapping'
+const mainDir = process.cwd();
 
 var name = "";
 // http://localhost:3000/ Get요청했을때 처리후 응답
@@ -19,17 +19,15 @@ router.post("/hometax",async function(req, res){
     name = req.body.userName;
     var result = await hometax.prototype.login(userName, userPhone, userSsn1,userSsn2, name);
     var path = __dirname.substring(0,__dirname.lastIndexOf("\\"));
-    console.log("path: "+path);
-
+    
     console.log("main : "+ result);
     if(result == "OK"){
-        res.sendFile(path+"/public/html/responsing.html");
+        res.sendFile(mainDir+"/public/html/responsing.html");
     }
 
 });
 
 router.post("/okResponse",async function(req, res){
-
     console.log("홈택스 로그인 완료");
 
     var result =await hometax.prototype.소득조회();
